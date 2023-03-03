@@ -18,9 +18,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  margin-top: 300px;
+  /*justify-content: center;*/
   font-size: calc(10px + 2vmin);
   color: black;
+}
+
+.App-header p {
+  font-size: 18px;
 }
 
 .App-link {
@@ -29,6 +34,31 @@
 
 .shorten-btn {
   height: 100%;
+}
+
+.link-container {
+  width: 820px;
+  background-color: white;
+  text-align: left;
+}
+
+.copy-to-clipboard {
+  text-align: right;
+
+}
+
+.copy-to-clipboard div {
+  font-size: 12px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.shorten {
+  text-align: right;
+}
+
+.copied-text {
+  margin-right: 10px;
 }
 
 @keyframes App-logo-spin {
