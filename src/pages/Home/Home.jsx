@@ -9,7 +9,7 @@ import api from '../../utils/api'
 
 function App() {
     const [link, setLink] = useState({key: '', url: ''});
-    const [url, setUrl] = useState('example.com');
+    const [url, setUrl] = useState('');
     const [copied, setCopied] = useState(false);
 
     const handleSubmit = (e) => {
@@ -32,7 +32,7 @@ function App() {
             setCopied(true);
             setTimeout(() => {
                 setCopied(false);
-            }, 400000);
+            }, 3000);
         } catch (err) {
         }
     };
