@@ -1,10 +1,8 @@
 import './Home.css';
 import {useState} from "react";
-import axios from "axios";
 import Grid from "@mui/material/Unstable_Grid2";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import {Button} from "@mui/material";
-import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 
 import api from '../../utils/api'
@@ -13,7 +11,6 @@ function App() {
     const [link, setLink] = useState({key: '', url: ''});
     const [url, setUrl] = useState('example.com');
     const [copied, setCopied] = useState(false);
-    const [copiedText, setCopiedText] = useState('');
 
     const handleSubmit = (e) => {
         console.log({
@@ -27,23 +24,7 @@ function App() {
         })
     }
 
-    const handleCopy = () => {
-        console.log('copying')
-        setCopied(true);
-        // setTimeout(() => {
-        //     setCopied(false);
-        // }, 3000);
-    }
-
     const shortenedUrl = link.key && `${window.location.protocol}//${window.location.host}/${link.key}`;
-
-    const handleVisit = () => {
-        if (!shortenedUrl) {
-            return
-        }
-
-        console.log(shortenedUrl)
-    }
 
     const copyToClipBoard = async (text) => {
         try {
